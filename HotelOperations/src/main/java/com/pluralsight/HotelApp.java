@@ -13,8 +13,8 @@ public class HotelApp {
 
         System.out.println("--------------------");
 
-        Room room1 = new Room(2, 124, false,true);
-        Room room2 = new Room(1, 130, true,true);
+        Room room1 = new Room(2, 124, true,true);
+        Room room2 = new Room(1, 130, false,true);
 
         System.out.println("Is room 1 available? " + room1.isDirty());
         System.out.println("Is room 2 available? " + room2.isDirty());
@@ -31,6 +31,21 @@ public class HotelApp {
         System.out.println("Regular Hours  : " + employee1.getRegularHours());
         System.out.println("Overtime Hours  : " + employee1.getOvertimeHours());
         System.out.println("Accumulated total Pay : $ " + employee1.getTotalPay());
+
+
+        System.out.println("--------------------");
+
+        System.out.println("Room occupied:  " + room1.isAvailable());
+        room1.checkIn();
+        room1.checkOut();
+        room1.cleanRoom();
+        System.out.println("Room Occupied:" + room1.isAvailable());
+
+
+
+
+
+
 
 
 

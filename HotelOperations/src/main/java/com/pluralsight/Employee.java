@@ -6,6 +6,7 @@ public class Employee {
     private String department;
     private double payRate;
     private int hoursWorked;
+    private double startTime;
 
     public Employee(String name, int employeeID, String department, double payRate, int hoursWorked) {
         this.name = name;
@@ -13,6 +14,7 @@ public class Employee {
         this.department = department;
         this.payRate = payRate;
         this.hoursWorked = hoursWorked;
+        this.startTime = Double.parseDouble(null);
     }
 
     public String getName() {

@@ -12,6 +12,14 @@ public class Room {
         this.isDirty = isDirty;
         this.available = available;
     }
+    public boolean available() {
+
+        if (!this.isAvailable() && !this.isDirty) {
+            return true;
+        }
+
+        return false;
+    }
 
     public int getNumOfBeds() {
         return numOfBeds;

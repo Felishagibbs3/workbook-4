@@ -36,6 +36,15 @@ public class Employee {
     }
     public double getTotalPay() {
 
-        return payRate * hoursWorked;
+        return getRegularHours() * payRate + getOvertimeHours() * payRate * 1.5;
     }
-}
+    public double getRegularHours() {
+
+        return Math.min(40, hoursWorked);
+    }
+    public double getOvertimeHours() {
+        return Math.max(0, hoursWorked - 40);
+    }
+
+   }
+

@@ -41,6 +41,12 @@ public class HotelApp {
         room1.cleanRoom();
         System.out.println("Room Occupied:" + room1.isAvailable());
 
+        System.out.println("--------------------");
+
+        employee1.punchIn(10.0);
+        employee1.punchOut(12.5);
+        System.out.println("Hours Worked: " + employee1.getHoursWorked());
+
 
 
 

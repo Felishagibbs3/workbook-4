@@ -3,7 +3,7 @@ package com.pluralsight;
 public class HotelApp {
     public static void main(String[] args) throws Exception {
         Reservation hoteReservation = new Reservation();
-        hoteReservation.setRoomType("King");
+        hoteReservation.setRoomType("Double");
         hoteReservation.setNumOfNights(2);
         hoteReservation.setWeekend(true);
 

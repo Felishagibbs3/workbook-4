@@ -11,11 +11,8 @@ public class HotelTest {
         // arrange
         Hotel theHotel = new Hotel("Ritz Carlton Jr.", 10, 50);
 
-
         // act
         theHotel.bookRoom(3, true);
-
-
 
         // assert
         assertEquals(7, theHotel.getAvailableSuites());
@@ -37,14 +34,13 @@ public class HotelTest {
 
     @Test
     public void getName_should_returnTheHotelsName() {
-
+        //arrange
         Hotel theHotel = new Hotel("Ritz Carlton Jr.", 10, 50);
 
-
-
+        // act
         String name = theHotel.getName();
 
-
+        // assert
         assertEquals("Ritz Carlton Jr.", name);
     }
 

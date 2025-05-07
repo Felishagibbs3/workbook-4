@@ -1,5 +1,7 @@
 package com.pluralsight;
 
+import java.time.LocalDateTime;
+
 public class HotelApp {
     public static void main(String[] args) throws Exception {
         Reservation hoteReservation = new Reservation();
@@ -43,9 +45,29 @@ public class HotelApp {
 
         System.out.println("--------------------");
 
-        employee1.punchIn(10.0);
+        employee1.punchIn(9.0);
         employee1.punchOut(12.5);
+        System.out.println("Employee: " + employee1.getName() + " " + "Hours worked: " + employee1.getHoursWorked());
+
+        employee1.timeCard(9.0, true);
+        employee1.timeCard(12.5, false);
         System.out.println("Hours Worked: " + employee1.getHoursWorked());
+
+        System.out.println("--------------------");
+
+        Hotel theHotel = new Hotel("Ritz Carlton Jr.", 50, 100);
+
+        boolean booked = theHotel.bookRoom(5,true);
+        System.out.println("Suite booking successful!" + booked);
+        System.out.println("Suites Available: " + theHotel.getAvailableSuites());
+
+        booked = theHotel.bookRoom(10, false);
+        System.out.println("Basic Room Booked Successfully " + booked);
+        System.out.println("Basic Rooms Available: " + theHotel.getAvailableBasicRooms());
+
+
+
+
 
 
 

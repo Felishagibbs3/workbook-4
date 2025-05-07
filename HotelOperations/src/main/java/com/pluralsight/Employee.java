@@ -69,6 +69,7 @@ public class Employee {
     }
     public void punchIn(double time) {
         this.startTime = time;
+        System.out.println("punched in at" + LocalDateTime.now());
     }
     public void punchOut (double time) {
         if (time >= startTime) {

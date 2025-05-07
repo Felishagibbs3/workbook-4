@@ -63,9 +63,9 @@ public class Room {
 
     }
     public boolean cleanRoom() {
-        if (!isAvailable() && (!isDirty)) {
-            isDirty = false;
-            System.out.println("Room has been cleaned and is ready for booking");
+        if (!isAvailable() && (isDirty)) {
+            isDirty = true;
+            System.out.println("Room Scheduled for Cleaning");
         } else if (isAvailable()) {
             available = true;
             System.out.println("Room is occupied");

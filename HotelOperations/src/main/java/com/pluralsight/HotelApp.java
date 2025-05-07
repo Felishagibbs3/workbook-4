@@ -54,7 +54,7 @@ public class HotelApp {
 
         System.out.println("--------------------");
 
-        Hotel theHotel = new Hotel("Ritz Carlton Jr.", 50, 100);
+        Hotel theHotel = new Hotel("Ritz Carlton Jr.", 20, 50);
 
         boolean booked = theHotel.bookRoom(5, true);
         System.out.println("Suite booking successful!" + booked);

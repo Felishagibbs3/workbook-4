@@ -69,16 +69,13 @@ public class Employee {
     }
     public void punchIn(double time) {
         this.startTime = time;
-        System.out.println("punched in at" + LocalDateTime.now());
+        System.out.println("punched in at " + LocalDateTime.now());
     }
     public void punchOut (double time) {
-        if (time >= startTime) {
-            double work = time - startTime;
-            this.hoursWorked += work;
-        } else {
-            System.out.println("Error: Punch out time is earlier than punch in time");
+        this.startTime = time;
+        System.out.println("punched out at " + LocalDateTime.now());
         }
-    }
+
     public void timeCard(double time, boolean isPunchIn) {
         if (isPunchIn) {
             this.punchIn(time);
@@ -86,6 +83,7 @@ public class Employee {
             this.punchOut(time);
         }
     }
+}
 
-   }
+
 

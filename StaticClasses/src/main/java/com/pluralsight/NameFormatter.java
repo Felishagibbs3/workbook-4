@@ -22,8 +22,9 @@ public class NameFormatter {
         if (!middleName.isEmpty()) {
             sb.append(" ").append(middleName);
         }
-
-        sb.append(", ").append(suffix);
+        if (!suffix.isEmpty()) {
+            sb.append(", ").append(suffix);
+        }
 
         return sb.toString();
     }
@@ -40,8 +41,8 @@ public class NameFormatter {
         String lastName = "";
 
         if (nameTokens.length == 4) {
-            firstName = nameTokens[0];
-            prefix = nameTokens[1];
+            firstName = nameTokens[1];
+            prefix = nameTokens[0];
             middleName = nameTokens[2];
             lastName = nameTokens[3];
         } else if (nameTokens.length == 3) {

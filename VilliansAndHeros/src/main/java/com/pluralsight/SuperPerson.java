@@ -27,7 +27,7 @@ public class SuperPerson {
 
     } public void fight (SuperPerson opponent) {
         // creating a method for fighting + printing out who we are fighting
-        int damageAmount = new Random().nextInt(20);
+        int damageAmount = new Random().nextInt(15);
         System.out.println(this.name + " is fighting " + opponent.name);
         opponent.takeDamage(damageAmount + this.experiencePoints);
     }
@@ -42,7 +42,7 @@ public class SuperPerson {
     }
     public String getStatus(){
         // ask and show how the super person is doing and retrieve health status
-        return this.name + " " + "has" + " " + this.health +  " " + "health left";
+        return this.name + " " + "has" + " " + this.health +  " " + "health left. ";
     }
 
 }

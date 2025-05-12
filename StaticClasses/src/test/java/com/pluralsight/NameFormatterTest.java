@@ -55,7 +55,7 @@ class NameFormatterTest {
         }
 
         // sb. append and either adding or taking away the comma is what helped solved this.
-    
+
         // rearranging the order of names in the parse to make the appropriate names fall in order /n
         // between first name and last name
 
